@@ -713,24 +713,3 @@ event.preventDefault();
     });
 </script>
 
-------------
-
-<script>
-    function scrollToAnswer() {
-        jQuery(".shaving-question-answer a").click(function(event){
-var offsettopAnswer = jQuery(jQuery(this).attr("href")).offset().top;
-            var scrollAnswer = joffsettopAnswer - jQuery(".page-header-affix").height();
-console.log(scrollAnswer);            
-event.preventDefault();
-             jQuery("html, body").animate({
-                scrollTop:scrollAnswer
-             },"slow");
-             });
-    }
-    jQuery(window).load(function(){
-        scrollToAnswer();
-    });
-    jQuery(window).ready(function(){
-        scrollToAnswer();
-    });
-</script>
